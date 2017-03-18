@@ -8,7 +8,7 @@
 //7 压缩合并JS
 //8 用babel编译es6,需要创建.babelrc文件
 //9 mock数据(npm i json-server -g 搭建虚拟服务器)
-//10
+//10 external外部配置文件(开发依赖)，例如项目用到jQuery
 
 
 var webpack=require('webpack');
