@@ -5,4 +5,12 @@
   background: #f5f5f5;
   @include center;
   @include borderRadius(15px);
+  & h1{
+    @include sc(16px,#e4393c);
+    text-align: center;
+    padding: 10px 0;
+  }
 }
+//.main h1{
+//  @include sc(14px,#e4393c);
+//}

@@ -8,6 +8,7 @@
 //7 压缩合并JS
 //8 用babel编译es6,需要创建.babelrc文件
 //9 mock数据(npm i json-server -g 搭建虚拟服务器)
+//10
 
 
 var webpack=require('webpack');
@@ -45,11 +46,11 @@ module.exports={
         inline: true,
         port:8000,
         //9.1配置后台接口
-        proxy:{
+        proxy:{//代理属性
             //路由映射
-            "/api/theaters_data":{
-                target:'http://localhost:9000/theaters_data',
-                pathRewrite: {"^/api/theaters_data":""}
+            "/api":{
+                target:'http://localhost:9000/',
+                pathRewrite: {"^/api":""}
             }
         }
     },
@@ -93,7 +94,7 @@ module.exports={
             abc:'自定义输出',
             // 4.2 输出后html的名字，可以自定义
             filename:'index.html',
-            //4.3 html的模板
+            //4.3 html的模板,也可以是xxx.html
             template:'webpack.tem.ejs'
         }),
         //7 代码优化：合并以及压缩代码
@@ -114,5 +115,13 @@ module.exports={
             disable:false,
             allChunks:true
         })
-    ]
+    ],
+    //10 项目依赖的外部文件，如jQuery
+    /*10.1 这样配置之后，最后就不会把jquery打包到build.js里，而且
+    * var $=require('jquery');这样仍然可以用
+    *
+    * */
+    externals:{
+        jquery:'window.jQuery'
+    }
 };
