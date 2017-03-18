@@ -1,5 +1,5 @@
 {
-  "name": "webpack-one",
+  "name": "webpack-config",
   "version": "1.0.0",
   "description": "小活動",
   "main": "index.js",
@@ -8,9 +8,6 @@
     "start": "webpack",
     "server": "webpack-dev-server"
   },
-  "keywords": [
-    "webpack"
-  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/wjf444128852.git"

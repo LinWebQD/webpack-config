@@ -1,5 +1,5 @@
 //3 通过require导入模块
-//var app=require('./app');
+//var arr=require('./app');
 //8.1 es6导入
 import { arr } from './app'
 //5 引入css

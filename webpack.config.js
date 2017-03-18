@@ -109,19 +109,29 @@ module.exports={
         //        comments:false
         //    }
         //}),
+
         //6.1 css抽离
         new ExtractTextPlugin({
             filename:'app_[hash].css',
             disable:false,
             allChunks:true
+        }),
+        new webpack.optimize.UglifyJsPlugin({
+            compress:{
+                warnings:false
+            },
+            output:{
+                comments:false
+            }
         })
-    ],
+    ]
+    //,
     //10 项目依赖的外部文件，如jQuery
     /*10.1 这样配置之后，最后就不会把jquery打包到build.js里，而且
     * var $=require('jquery');这样仍然可以用
     *
     * */
-    externals:{
-        jquery:'window.jQuery'
-    }
+    //externals:{
+    //    jquery:'window.jQuery'
+    //}
 };
