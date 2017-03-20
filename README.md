@@ -3,7 +3,8 @@
 #### 1.1 如何使用命令行把文件夹用VS或者webstorm打开
 + vs安装的时候已经默认添加到环境变量了，直接在文件夹下输入：code .就会自动把该文件夹用visual Studio编辑器打开
 + webstorm的话，添加到环境变量就OK，如我的ws，我把：E:\tools\WS\WebStorm 2016.3.4\bin；添加到环境变量，然后在文件夹下输入：webstorm .就会自动把所在文件夹用ws打开了
-+ 命令行:ping www.baidu.com查看该域名的IP地址
++ 命令行:ping url 查看该url的IP地址
++  1 案例- [豆瓣热映电影](http://wjf444128852.github.io/sumDemos/doubanmovie/)(源码在webpack/demos/webpack-one)
 
 #### 1.2 开发依赖与项目依赖(package.json)
 + 开发依赖就是开发过程中用到的如编译工具等，应该放在devDependencies下面
