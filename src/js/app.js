@@ -5,8 +5,11 @@
 //1 定义一个模块
 const arr=['张无忌','周芷若','郭靖'];
 
+// let a=10;
+
 setTimeout(function(){
     console.log(arr[0]);
+    // console.log(a);
 },500);
 
 
