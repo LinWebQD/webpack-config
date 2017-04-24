@@ -22,3 +22,6 @@ students.getData();
 //11.1 测试es6
 
 mayun.said();
+
+// 测试操作DOM
+import './aboutdom'
