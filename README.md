@@ -41,10 +41,12 @@
 + ![步骤](images/common02.png)
 + **切记：不要循环引用(如a依赖b,b依赖c,c依赖d...)**
 
-### 2 如何启动服务器
+### 2 如何启动服务器以及手机查看效果
 + npm install webpack-dev-server -g 全局安装webpack服务器，webpack-dev-server启动服务器，如果报错(Error: `output.path` needs to be an absolute path or `/`.
 )，说明输出路径必须是绝对路径
 + devserver有自动刷新功能
++ 如何手机实时查看，如下：配置host,我的本机IP，port端口，手机和电脑同一个局域网即可访问：http://172.16.9.142:6800/ 查看实时效果
++ ![步骤](images/devServer_mobile.png)
 + webpack-dev-server --hot --inline
 + 题外话，启动服务器后浏览器查看DOM会看到html标签下有shadow-root，具体了解请[参考图灵社区](http://www.ituring.com.cn/article/177453 "组件化")
 
