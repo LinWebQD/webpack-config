@@ -20,13 +20,20 @@
 + rm build.js 删除build.js
 + rm -rf build 删除文件夹
 
-### 二、配置思想以及流程
+#### 1.4如何使用
++ 1、clone到本地
++ 2、<code>npm install</code>
++ 3、<code>npm run server</code>自动打开浏览器启动服务器热更新(服务器地址是我自己的IP地址)，默认执行：webpack-dev-server --open
++ 4、<code>npm run start</code>自动打包build文件夹，默认执行：webpack
++ 5、<code>npm run clean</code>自动删除build文件夹默认执行rimraf build
+
+### 二、配置思想以及流程(已经完成的配置)
 + 1 模块化开发commonjs
 + 2 启动server webpack-dev-server
 + 3 版本号控制 hash  chunkhash
 + 4 html自定义模板
 + 5 css，sass引入
-+ 6 抽离css
++ 6 抽离压缩css
 + 7 压缩合并JS
 + 8 用babel编译es6,需要创建.babelrc文件
 + 9 mock数据(npm i json-server -g 搭建虚拟服务器)

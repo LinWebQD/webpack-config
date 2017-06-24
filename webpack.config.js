@@ -49,7 +49,7 @@ module.exports={
         contentBase:path.join(__dirname, "build"),
         inline: true,
         port:8000,
-        // host: "0.0.0.0",
+        host: "192.168.1.105",
         //9.1配置后台接口
         proxy:{//代理属性
             //路由映射
@@ -69,7 +69,15 @@ module.exports={
                 // 6.2 想抽离出来得
                 use:ExtractTextPlugin.extract({
                     fallback:'style-loader',
-                    use:'css-loader',
+                    use:[
+                      {
+                        loader: 'css-loader',
+                        // 压缩CSS
+                        options:{
+                          minimize: true
+                        }
+                      }
+                    ]
                 })
             },
             { //5.2.SASS的.scss 文件使用 style-loader、css-loader 和 sass-loader 来编译处理
@@ -87,7 +95,12 @@ module.exports={
             //11 处理图片
             {
                 test:/\.(jpg|png|gif)$/,
-                use:'file-loader'
+                use:{
+                    loader:'url-loader',
+                    options: {
+                        limit: 8192
+                  }
+                }
             },
             {
                 test:/\.(woff|woff2|eot|ttf|svg)$/,
