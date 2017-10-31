@@ -49,7 +49,7 @@ module.exports={
         contentBase:path.join(__dirname, "build"),
         inline: true,
         port:8000,
-        host: "192.168.1.105",
+        // host: "http://localhost",
         //9.1配置后台接口
         proxy:{//代理属性
             //路由映射
